@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'bundler/setup'
+require 'dotenv/load'
+require 'ruby_llm/providers/apfel'
+
+require 'irb'
+
+RubyLLM.configure do |config|
+  config.apfel_api_key = ENV.fetch('APFEL_API_KEY', nil)
+  config.apfel_api_base = ENV.fetch('APFEL_API_BASE', 'https://api.example.com/v1')
+end
+
+IRB.start(__FILE__)
