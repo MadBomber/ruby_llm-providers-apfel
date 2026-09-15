@@ -8,14 +8,14 @@ gem_version = File.read(File.expand_path('lib/ruby_llm/providers/apfel/version.r
 Gem::Specification.new do |spec|
   spec.name = 'ruby_llm-providers-apfel'
   spec.version = gem_version
-  spec.authors = ['your-github-org']
-  spec.email = ['maintainers@example.com']
+  spec.authors = ['madbomber']
+  spec.email = ['dvanhoozer@gmail.com']
 
   spec.summary = 'RubyLLM provider for Apfel.'
   spec.description = 'Adds Apfel provider support to RubyLLM. Apfel is a macOS-only local server ' \
                      "that exposes Apple's on-device Apple Intelligence model over an " \
                      'OpenAI-compatible API, letting RubyLLM talk to it like any other provider.'
-  spec.homepage = 'https://github.com/your-github-org/ruby_llm-providers-apfel'
+  spec.homepage = 'https://github.com/madbomber/ruby_llm-providers-apfel'
   spec.license = 'MIT'
   spec.required_ruby_version = '>= 3.1'
 
