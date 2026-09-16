@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 gemspec
 
 group :development do
-  gem 'archspec' if RUBY_ENGINE == 'ruby' && Gem::Version.new(RUBY_VERSION) >= Gem::Version.new('3.2')
+  gem 'archspec'
   gem 'bundler', '>= 2.0'
   gem 'dotenv'
   gem 'fast-mcp' # builds examples/demo_mcp_server.rb, the MCP server behind 08_mcp_server_tools.rb

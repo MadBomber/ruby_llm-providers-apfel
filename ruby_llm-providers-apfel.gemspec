@@ -17,7 +17,7 @@ Gem::Specification.new do |spec|
                      'OpenAI-compatible API, letting RubyLLM talk to it like any other provider.'
   spec.homepage = 'https://github.com/madbomber/ruby_llm-providers-apfel'
   spec.license = 'MIT'
-  spec.required_ruby_version = '>= 3.1'
+  spec.required_ruby_version = '>= 3.3'
 
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = spec.homepage
