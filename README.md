@@ -41,20 +41,23 @@ Add this line to your application's Gemfile:
 gem 'ruby_llm-providers-apfel', require: 'ruby_llm/providers/apfel'
 ```
 
-Then configure the provider to point at your local Apfel server:
+The provider works out of the box against Apfel's default address
+(`http://127.0.0.1:11434/v1`) with no API key, so no configuration is required:
 
 ```ruby
 require 'ruby_llm/providers/apfel'
-
-RubyLLM.configure do |config|
-  config.apfel_api_base = ENV.fetch('APFEL_API_BASE', 'http://127.0.0.1:11434/v1')
-  # Only needed if you started `apfel --serve --token <value>`
-  config.apfel_api_key = ENV['APFEL_API_KEY']
-end
 ```
 
-Since Apfel runs locally with no API key required, `apfel_api_key` can be left unset unless you
-started the server with `--token`.
+Configure it only to override the defaults:
+
+```ruby
+RubyLLM.configure do |config|
+  # Only needed when the server listens somewhere else
+  config.apfel_api_base = ENV.fetch('APFEL_API_BASE', nil)
+  # Only needed if you started `apfel --serve --token <value>`
+  config.apfel_api_key = ENV.fetch('APFEL_API_KEY', nil)
+end
+```
 
 ## Usage
 

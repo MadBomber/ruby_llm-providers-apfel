@@ -5,7 +5,7 @@ module RubyLLM
     # Version of the ruby_llm-providers-apfel gem. Kept in its own file so the
     # gemspec can read the literal without loading the provider.
     class Apfel < Provider
-      VERSION = '0.1.0'
+      VERSION = '0.2.0'
 
       def self.version
         VERSION

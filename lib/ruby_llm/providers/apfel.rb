@@ -6,8 +6,14 @@ require 'ruby_llm/providers/apfel/connection_guard'
 
 module RubyLLM
   module Providers
-    # Apfel API integration.
+    # Apfel — Apple's on-device Foundation Model (AFM) exposed as a local
+    # OpenAI-compatible server by the `apfel` CLI (`apfel --serve`).
+    # Works out of the box against http://127.0.0.1:11434/v1 — no API key
+    # required (set apfel_api_key only when the server was started with
+    # `apfel --serve --token <value>`).
     class Apfel < Provider
+      DEFAULT_API_BASE = 'http://127.0.0.1:11434/v1'
+
       # Apfel's ChatCompletions protocol.
       class ChatCompletions < Protocols::ChatCompletions
         def models_url
@@ -23,10 +29,12 @@ module RubyLLM
       end
 
       def api_base
-        @config.apfel_api_base || 'https://api.example.com/v1'
+        @config.apfel_api_base || DEFAULT_API_BASE
       end
 
       def headers
+        return {} unless @config.apfel_api_key
+
         { 'Authorization' => "Bearer #{@config.apfel_api_key}" }
       end
 
@@ -36,7 +44,11 @@ module RubyLLM
         end
 
         def configuration_requirements
-          %i[apfel_api_key]
+          []
+        end
+
+        def local?
+          true
         end
 
         # Use this only when the provider has no model-listing endpoint.

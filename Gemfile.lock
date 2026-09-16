@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ruby_llm-providers-apfel (0.1.0)
+    ruby_llm-providers-apfel (0.2.0)
       ruby_llm (>= 2.0.0.rc1)
 
 GEM
@@ -301,7 +301,7 @@ CHECKSUMS
   rubocop-rspec (3.10.2) sha256=0b3e2ecc592cd10ecbf0095bb58d1e357905276e069643523cc19eb7495f65e2
   ruby-progressbar (1.13.0) sha256=80fc9c47a9b640d6834e0dc7b3c94c9df37f08cb072b7761e4a71e22cff29b33
   ruby_llm (2.0.0.rc3) sha256=ef492ce50649c480d0afa11bfc43114b3e65ccda3d6a347e82b0d8fc317b1acb
-  ruby_llm-providers-apfel (0.1.0)
+  ruby_llm-providers-apfel (0.2.0)
   rubydex (0.4.1) sha256=9856af8bfbe656eed95449dd9e2c8239a74662b4bb8563e4b99221dbc065a34a
   rubydex (0.4.1-aarch64-linux) sha256=abc1c9eb22479f60dd015fa81373163c5a71f2700b76bced1282631686bd6271
   rubydex (0.4.1-arm64-darwin) sha256=d23720253876d88fb98954e5d3a1ef9696a269697acf50e3ab53cdfbb2b66b96
