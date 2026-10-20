@@ -6,7 +6,7 @@
 # The simplest possible use of RubyLLM with the Apfel provider: ask a single
 # question and print the answer.
 #
-# Setup: see common.rb (requires `apfel --serve` running).
+# Setup: see common.rb (installs and starts the apfel server if needed).
 #
 # Run:
 #   bundle exec ruby examples/01_basic_usage.rb

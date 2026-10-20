@@ -6,7 +6,7 @@
 # Streams a response chunk by chunk instead of waiting for the full answer,
 # using Apfel's OpenAI-compatible SSE streaming support.
 #
-# Setup: see common.rb (requires `apfel --serve` running).
+# Setup: see common.rb (installs and starts the apfel server if needed).
 #
 # Run:
 #   bundle exec ruby examples/02_streaming_response.rb

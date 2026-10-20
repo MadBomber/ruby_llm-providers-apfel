@@ -7,7 +7,7 @@
 # question needs the tool, RubyLLM runs #execute and feeds the result back
 # to the model, matching Apfel's declared `tools` / `tool_choice` support.
 #
-# Setup: see common.rb (requires `apfel --serve` running).
+# Setup: see common.rb (installs and starts the apfel server if needed).
 #
 # Run:
 #   bundle exec ruby examples/04_tool_calling.rb

@@ -7,7 +7,7 @@
 # data instead of free text, using Apfel's declared `response_format`
 # support.
 #
-# Setup: see common.rb (requires `apfel --serve` running).
+# Setup: see common.rb (installs and starts the apfel server if needed).
 #
 # Run:
 #   bundle exec ruby examples/05_structured_output.rb

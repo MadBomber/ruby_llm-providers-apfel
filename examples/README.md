@@ -7,10 +7,13 @@ self-contained script; shared setup lives in `common.rb`, which every demo loads
 ## Running a demo
 
 ```sh
-brew install apfel
-apfel --serve
 bundle exec ruby examples/01_basic_usage.rb
 ```
+
+`common.rb` takes care of the server: if `apfel` is not on `$PATH` it runs `brew install apfel`,
+and if nothing answers at the configured URL it starts `apfel --serve` in the background (log in
+`tmp/apfel-server.log`). The server keeps running for later demos; stop it with
+`pkill -f 'apfel --serve'`. Set `APFEL_NO_AUTOSTART=1` to manage the server yourself.
 
 Override the server URL, key, or model with `APFEL_API_BASE`, `APFEL_API_KEY`, or `APFEL_MODEL`
 (see `common.rb`).

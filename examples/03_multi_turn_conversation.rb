@@ -6,7 +6,7 @@
 # A single Chat instance keeps its own conversation history, so later
 # questions can refer back to earlier turns without resending them.
 #
-# Setup: see common.rb (requires `apfel --serve` running).
+# Setup: see common.rb (installs and starts the apfel server if needed).
 #
 # Run:
 #   bundle exec ruby examples/03_multi_turn_conversation.rb

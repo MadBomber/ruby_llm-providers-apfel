@@ -10,7 +10,7 @@
 # response through the same provider connection to show everything Apfel
 # reports: context window, and supported/unsupported request parameters.
 #
-# Setup: see common.rb (requires `apfel --serve` running).
+# Setup: see common.rb (installs and starts the apfel server if needed).
 #
 # Run:
 #   bundle exec ruby examples/06_list_models.rb

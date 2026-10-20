@@ -15,7 +15,7 @@
 # local, chat_completions-only endpoint has no backing for — RubyLLM would
 # either send params Apfel ignores or a method would have nothing to show.
 #
-# Setup: see common.rb (requires `apfel --serve` running).
+# Setup: see common.rb (installs and starts the apfel server if needed).
 #
 # Run:
 #   bundle exec ruby examples/07_with_capabilities.rb
